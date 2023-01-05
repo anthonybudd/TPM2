@@ -24,8 +24,7 @@ sudo echo 'dtparam=spi=on' >> /boot/config.txt
 sudo echo 'dtoverlay=tpm-slb9670' >> /boot/config.txt
 
 apt-get install tpm2-tools
-# or build from source. Recommended but more complex.
-# https://github.com/tpm2-software
+# or build from source. Recommended but more complex. https://github.com/tpm2-software
 
 git clone git@github.com:anthonybudd/TPM2.git
 cd TPM2
