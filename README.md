@@ -1,5 +1,9 @@
 # TPM2
 
+<p  align="center">
+    <img src="https://github.com/anthonybudd/TPM2/raw/main/docs/images/tmp-icon.png" width="200" alt="TMP icon">
+</p>
+
 Node JS library for working with the TPM2.
 
 
