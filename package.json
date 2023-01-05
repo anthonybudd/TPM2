@@ -4,7 +4,7 @@
   "description": "Node JS library for working with the TPM2.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/anthonybudd/TPM2/issues"
   },
-  "homepage": "https://github.com/anthonybudd/TPM2#readme"
+  "homepage": "https://github.com/anthonybudd/TPM2#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^5.8.0",
+    "jsdoc": "^3.6.11",
+    "jsdoc-http-plugin": "^0.3.2",
+    "jsdoc-to-markdown": "^7.1.1",
+    "mocha": "^9.1.3",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2"
+  }
 }
