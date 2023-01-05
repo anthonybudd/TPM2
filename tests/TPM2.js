@@ -1,6 +1,6 @@
 const assert = require('assert');
 const { expect } = require('chai');
-const TPM2 = require('./../index.js');
+const TPM2 = require('../index.js');
 const tpm2 = new TPM2;
 
 describe('TPM2', () => {

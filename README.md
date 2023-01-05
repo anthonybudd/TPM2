@@ -1,7 +1,7 @@
 # TPM2-Node
 
 <p  align="center">
-    <img src="https://github.com/anthonybudd/TPM2/raw/main/docs/images/tmp-icon.png" width="200" alt="TMP icon">
+    <img src="https://github.com/anthonybudd/TPM2/raw/main/docs/images/tpm-icon.png" width="200" alt="tpm icon">
 </p>
 
 Node JS library for working with the TPM2.
@@ -17,7 +17,7 @@ console.log(tpm2.getRandom(8));
 
 
 ### Raspberry Pi Set-up
-I tested this library using the GeekPi TMP2 module.
+I tested this library using the GeekPi TPM2 module.
 
 ```sh
 sudo echo 'dtparam=spi=on' >> /boot/config.txt
@@ -28,7 +28,7 @@ apt-get install tpm2-tools
 # https://github.com/tpm2-software
 
 git clone git@github.com:anthonybudd/TPM2.git
-cd TMP2
+cd TPM2
 npm i
 npm run test
 ```
