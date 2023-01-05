@@ -1,10 +1,10 @@
 # TPM2
 
-Node JS library for working with the TPM2 module.
+Node JS library for working with the TPM2.
 
 
 ```js
-const TPM2 = require('./index.js');
+const TPM2 = require('TPM2');
 
 const tpm2 = new TPM2;
 
