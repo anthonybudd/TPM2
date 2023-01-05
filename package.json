@@ -1,0 +1,19 @@
+{
+  "name": "tpm2",
+  "version": "1.0.0",
+  "description": "Node JS library for working with the TPM2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonybudd/TPM2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonybudd/TPM2/issues"
+  },
+  "homepage": "https://github.com/anthonybudd/TPM2#readme"
+}
