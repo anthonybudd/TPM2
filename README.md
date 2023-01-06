@@ -9,10 +9,35 @@ Node JS library for working with the TPM2.
 
 ```js
 const TPM2 = require('TPM2');
-
 const tpm2 = new TPM2;
 
+// Random bytes
 console.log(tpm2.getRandom(8));
+
+// Encrypt/decrypt file.
+tpm2.createPrimary({
+    keyContext: 'primary.ctx'
+});
+tpm2.create({
+    parentContext: 'primary.ctx',
+    keyAlgorithm: 'aes128',
+    public: 'key.pub',
+    private: 'key.priv',
+});
+tpm2.load({
+    parentContext: 'primary.ctx',
+    keyContext: 'key.ctx',
+    public: 'key.pub',
+    private: 'key.priv',
+});
+tpm2.encrypt('path/to/.env', {
+    parentContext: 'key.ctx',
+    output: 'secrets.enc'
+});
+tpm2.decrypt('secrets.enc', {
+    parentContext: 'key.ctx',
+    output: 'decrypted-secrets.txt'
+});
 ```
 
 
