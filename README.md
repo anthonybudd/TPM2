@@ -14,12 +14,12 @@ The TPM classs is a JS API of the tpm2-tools found here [tpm2-tools.readthedocs.
 
 
 ```
-npm i trusted-platform-module
+npm i trusted-platform-module-2
 ```
 
 ```js
-const TrustedPlatformModule = require('trusted-platform-module');
-const tpm2 = new TrustedPlatformModule;
+const TPM2 = require('trusted-platform-module-2');
+const tpm2 = new TPM2;
 
 // Random bytes
 console.log(tpm2.getRandom(8));
