@@ -1,11 +1,21 @@
 # TPM2-Node
 
-<p  align="center">
-    <img src="https://github.com/anthonybudd/TPM2/raw/main/docs/images/tpm-icon.png" width="200" alt="tpm icon">
+<p align="center">
+    <img src="https://github.com/anthonybudd/TPM2/raw/main/docs/images/tpm-icon.png" width="100" alt="tpm icon">
 </p>
 
-Node JS library for working with the TPM2.
+<p align="center">
+    <img src="https://github.com/anthonybudd/TPM2/raw/main/docs/images/geek-pi-tmp2.png" width="300" alt="geekpi tpm">
+</p>
 
+Node JS library for working with the TPM (Trusted Platform Module) 2.0
+
+The TPM classs is a JS API of the tpm2-tools found here [tpm2-tools.readthedocs.io](https://tpm2-tools.readthedocs.io/en/latest/)
+
+
+```
+npm i tpm
+```
 
 ```js
 const TPM2 = require('TPM2');
@@ -15,6 +25,21 @@ const tpm2 = new TPM2;
 console.log(tpm2.getRandom(8));
 
 // Encrypt/decrypt file.
+tpm2.encrypt('path/to/.env', {
+    parentContext: 'key.ctx',
+    output: 'secrets.enc'
+});
+tpm2.decrypt('secrets.enc', {
+    parentContext: 'key.ctx',
+    output: 'decrypted-secrets.txt'
+});
+```
+
+
+### Example
+Below is a full example on how to use the TPM library to: create a primary hierarchy, create a child object, load the public/private portions of the key into the TPM, then encrypt a file with that key. 
+
+```js
 tpm2.createPrimary({
     keyContext: 'primary.ctx'
 });
@@ -34,15 +59,12 @@ tpm2.encrypt('path/to/.env', {
     parentContext: 'key.ctx',
     output: 'secrets.enc'
 });
-tpm2.decrypt('secrets.enc', {
-    parentContext: 'key.ctx',
-    output: 'decrypted-secrets.txt'
-});
 ```
 
 
 ### Raspberry Pi Set-up
-I tested this library using the GeekPi TPM2 module.
+I tested this library using the GeekPi TPM2 module which has a Infineon Optiga SLB 9670.
+
 
 ```sh
 sudo echo 'dtparam=spi=on' >> /boot/config.txt
