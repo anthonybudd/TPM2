@@ -10,7 +10,9 @@
 
 Node JS library for working with the TPM (Trusted Platform Module) 2.0
 
-The TPM classs is a JS API of the tpm2-tools found here [tpm2-tools.readthedocs.io](https://tpm2-tools.readthedocs.io/en/latest/)
+The TPM classs is a JS API of the tpm2-tools found here [tpm2-tools.readthedocs.io](https://tpm2-tools.readthedocs.io/en/latest/).
+
+⚠️ This is not a stable API. This repo is just for my personal use. If you would like a stable version reach out and I will release a stable 1.0 ⚠️
 
 
 ```
@@ -72,6 +74,7 @@ sudo echo 'dtoverlay=tpm-slb9670' >> /boot/config.txt
 
 apt-get install tpm2-tools
 # or build from source. Recommended but more complex. https://github.com/tpm2-software
+sudo reboot
 
 git clone git@github.com:anthonybudd/TPM2.git
 cd TPM2
